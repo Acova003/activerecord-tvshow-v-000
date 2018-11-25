@@ -20,6 +20,6 @@ class Show < ActiveRecord::Base
   end 
   
   def self.popular_shows
-    Show.where("rating > 5", params[:rating])
+    Show.where("rating > ?", 200)
   end 
 end 
