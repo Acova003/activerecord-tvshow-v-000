@@ -5,6 +5,6 @@ class Show < ActiveRecord::Base
   
   def self.most_popular_show 
 
-  Client.where("orders_count = ?", params[:orders])  
+  Show.where("name = ?", maximum(rating))  
   end 
 end 
