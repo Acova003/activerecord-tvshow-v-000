@@ -20,6 +20,6 @@ class Show < ActiveRecord::Base
   end 
   
   def self.popular_shows
-    Client.where("orders_count = ?", params[:orders])
+    Show.where("rating > 5", params[:rating])
   end 
 end 
