@@ -4,6 +4,6 @@ class Show < ActiveRecord::Base
   end 
   
   def self.most_popular_show 
-  Show.includes("orders").where(first_name: 'Ryan', orders: { status: 'received' }).count 
+  Show.includes("orders").where(first_name: 'Ryan', orders: { status: 'received' }).maximum
   end 
 end 
