@@ -19,7 +19,7 @@ class Show < ActiveRecord::Base
     Show.sum(:rating)
   end 
   
-  def self.
-    
+  def self.popular_shows
     Client.where("orders_count = ?", params[:orders])
+  end 
 end 
